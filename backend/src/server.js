@@ -23,7 +23,7 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [
-  "http://localhost:5173",
+  "https://eventora-web.vercel.app",
 ];
 
 app.use(
