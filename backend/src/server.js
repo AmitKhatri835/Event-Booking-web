@@ -22,6 +22,10 @@ const app = express();
 
 app.use(express.json());
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [
+  "http://localhost:3001",
+];
+
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -34,9 +38,7 @@ app.use(
     credentials: true,
   }),
 );
-const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [
-  "http://localhost:3001",
-];
+
 
 app.use("/api/auth", authRoutes);
 
