@@ -1,6 +1,6 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
 
 const connectDB = require("./config/db");
 
@@ -23,7 +23,7 @@ const app = express();
 app.use(express.json());
 
 const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(",") || [
-  "http://localhost:3001",
+  "http://localhost:5173",
 ];
 
 app.use(

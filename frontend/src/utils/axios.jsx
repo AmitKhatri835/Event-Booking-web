@@ -3,8 +3,6 @@ import axios from "axios";
 const api = axios.create({
   baseURL: "https://event-booking-back.vercel.app/api/",
 
-  timeout: 5000,
-
   headers: {
     "Content-Type": "application/json",
   },
